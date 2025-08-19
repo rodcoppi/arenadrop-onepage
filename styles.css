@@ -1198,19 +1198,35 @@ h4 {
 
 .members-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
     margin-top: var(--space-xl);
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(42, 42, 42, 0.4) 100%);
+    border: 1px solid rgba(244, 96, 19, 0.1);
+    border-radius: var(--space-lg);
+    padding: var(--space-xl);
+    backdrop-filter: blur(15px);
+    position: relative;
+}
+
+.members-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+    opacity: 0.6;
 }
 
 .member-card {
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(42, 42, 42, 0.9) 100%);
-    border: 1px solid rgba(244, 96, 19, 0.15);
-    border-radius: var(--space-md);
-    padding: var(--space-xl);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid rgba(244, 96, 19, 0.08);
+    border-radius: var(--space-sm);
+    padding: var(--space-lg);
     position: relative;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     text-align: left;
     overflow: hidden;
 }
@@ -1221,23 +1237,24 @@ h4 {
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
+    height: 2px;
     background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
-    opacity: 0.7;
+    opacity: 0.4;
     transition: opacity 0.3s ease;
 }
 
 .member-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(244, 96, 19, 0.25);
+    transform: translateY(-2px);
+    border-color: rgba(244, 96, 19, 0.15);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
     box-shadow: 
-        0 12px 25px rgba(244, 96, 19, 0.15),
-        0 6px 12px rgba(0, 0, 0, 0.1);
+        0 8px 20px rgba(244, 96, 19, 0.1),
+        0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
 .member-card:hover::before {
-    opacity: 1;
+    opacity: 0.8;
 }
 
 .member-role {
@@ -1270,6 +1287,166 @@ h4 {
     margin-bottom: 0;
 }
 
+/* DESKTOP ENHANCEMENTS - Above 1024px */
+@media (min-width: 1024px) {
+    .hero {
+        min-height: 80vh;
+        background-attachment: fixed;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+        letter-spacing: -0.03em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.4rem;
+        max-width: 900px;
+    }
+    
+    .logo-img {
+        height: 200px;
+        margin-bottom: 3rem;
+    }
+    
+    /* Enhanced section layouts */
+    .business-content {
+        max-width: 1100px;
+    }
+    
+    .model-points {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-xl);
+    }
+    
+    .model-point {
+        padding: var(--space-2xl);
+        border-radius: var(--space-lg);
+    }
+    
+    .model-point:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 
+            0 20px 40px rgba(244, 96, 19, 0.2),
+            0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Enhanced roadmap */
+    .strategy-timeline {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-xl);
+    }
+    
+    .strategy-phase {
+        padding: var(--space-2xl);
+        border-radius: var(--space-lg);
+    }
+    
+    /* Enhanced team section */
+    .members-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+        padding: var(--space-2xl);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .member-card {
+        padding: var(--space-xl);
+        border-radius: var(--space-md);
+    }
+    
+    .member-card:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 
+            0 15px 30px rgba(244, 96, 19, 0.15),
+            0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Enhanced competitive advantages */
+    .advantages-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-xl);
+        max-width: 1200px;
+    }
+    
+    .advantage-section {
+        padding: var(--space-2xl);
+        border-radius: var(--space-lg);
+    }
+    
+    .advantage-section:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 
+            0 20px 40px rgba(244, 96, 19, 0.2),
+            0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Enhanced market section */
+    .market-points {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-xl);
+    }
+    
+    .market-point {
+        padding: var(--space-2xl);
+        border-radius: var(--space-lg);
+    }
+    
+    /* Enhanced strategic positioning */
+    .positioning-elements {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-2xl);
+    }
+    
+    .positioning-card {
+        padding: var(--space-3xl);
+        border-radius: var(--space-2xl);
+    }
+    
+    .objectives-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-xl);
+    }
+    
+    .objective-item {
+        padding: var(--space-2xl);
+        border-radius: var(--space-lg);
+    }
+}
+
+/* ULTRA WIDE DESKTOP - Above 1440px */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+        padding: 0 var(--space-2xl);
+    }
+    
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+        max-width: 1000px;
+    }
+    
+    .model-points,
+    .market-points {
+        gap: var(--space-2xl);
+    }
+    
+    .members-grid {
+        max-width: 1400px;
+        gap: var(--space-2xl);
+    }
+    
+    .advantages-content {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1400px;
+    }
+}
+
 /* Mobile optimization for team section */
 @media (max-width: 768px) {
     .team-section {
@@ -1283,10 +1460,14 @@ h4 {
     
     .members-grid {
         grid-template-columns: 1fr;
-        gap: var(--space-md);
+        gap: var(--space-sm);
+        padding: var(--space-lg);
     }
     
-    .member-card,
+    .member-card {
+        padding: var(--space-md);
+    }
+    
     .success-point {
         padding: var(--space-lg);
     }
