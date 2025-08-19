@@ -1105,6 +1105,450 @@ h4 {
 }
 
 
+/* THE TEAM SECTION */
+.team-section {
+    padding: var(--space-3xl) 0;
+    background: linear-gradient(180deg, rgba(42, 42, 42, 0.2) 0%, rgba(26, 26, 26, 0.1) 100%);
+    border-top: 1px solid rgba(244, 96, 19, 0.08);
+    border-bottom: 1px solid rgba(244, 96, 19, 0.08);
+}
+
+.team-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-description {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--space-3xl);
+}
+
+.proven-success {
+    margin-bottom: var(--space-3xl);
+}
+
+.proven-success h3,
+.team-members h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.success-points {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.success-point {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(42, 42, 42, 0.9) 100%);
+    border: 1px solid rgba(244, 96, 19, 0.15);
+    border-radius: var(--space-md);
+    padding: var(--space-xl);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(10px);
+    text-align: left;
+}
+
+.success-point::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.success-point:hover {
+    transform: translateY(-4px);
+    border-color: rgba(244, 96, 19, 0.25);
+    box-shadow: 
+        0 12px 25px rgba(244, 96, 19, 0.15),
+        0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.success-point:hover::before {
+    opacity: 1;
+}
+
+.success-point strong {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    display: block;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.member-card {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(42, 42, 42, 0.9) 100%);
+    border: 1px solid rgba(244, 96, 19, 0.15);
+    border-radius: var(--space-md);
+    padding: var(--space-xl);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(10px);
+    text-align: left;
+    overflow: hidden;
+}
+
+.member-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(244, 96, 19, 0.25);
+    box-shadow: 
+        0 12px 25px rgba(244, 96, 19, 0.15),
+        0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.member-card:hover::before {
+    opacity: 1;
+}
+
+.member-role {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-sm);
+}
+
+.member-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+    line-height: 1.4;
+}
+
+.member-details p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: var(--space-xs);
+    font-weight: 400;
+}
+
+.member-details p:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobile optimization for team section */
+@media (max-width: 768px) {
+    .team-section {
+        padding: var(--space-2xl) 0;
+    }
+    
+    .team-description {
+        font-size: 1.1rem;
+        margin-bottom: var(--space-2xl);
+    }
+    
+    .members-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .member-card,
+    .success-point {
+        padding: var(--space-lg);
+    }
+    
+    .member-card h4 {
+        font-size: 1.2rem;
+    }
+    
+    .success-points {
+        gap: var(--space-md);
+    }
+    
+    .proven-success h3,
+    .team-members h3 {
+        font-size: 1.4rem;
+        margin-bottom: var(--space-lg);
+    }
+}
+
+/* STRATEGIC POSITIONING SECTION */
+.strategic-positioning {
+    padding: var(--space-3xl) 0;
+    background: linear-gradient(135deg, rgba(244, 96, 19, 0.05) 0%, rgba(210, 0, 28, 0.05) 100%);
+}
+
+.positioning-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.positioning-description {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--space-3xl);
+}
+
+.positioning-elements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-3xl);
+}
+
+.positioning-card {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(42, 42, 42, 0.9) 100%);
+    border: 1px solid rgba(244, 96, 19, 0.15);
+    border-radius: var(--space-lg);
+    padding: var(--space-2xl);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    overflow: hidden;
+}
+
+.positioning-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+    opacity: 0.8;
+}
+
+.positioning-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(244, 96, 19, 0.3);
+    box-shadow: 
+        0 15px 35px rgba(244, 96, 19, 0.2),
+        0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-lg);
+    display: block;
+}
+
+.positioning-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-lg);
+    line-height: 1.3;
+}
+
+.positioning-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.immediate-objectives {
+    margin-bottom: var(--space-3xl);
+}
+
+.immediate-objectives h3,
+.long-term-vision h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+}
+
+.objective-item {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(42, 42, 42, 0.9) 100%);
+    border: 1px solid rgba(244, 96, 19, 0.15);
+    border-radius: var(--space-md);
+    padding: var(--space-xl);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(10px);
+    text-align: left;
+}
+
+.objective-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.objective-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(244, 96, 19, 0.25);
+    box-shadow: 
+        0 12px 25px rgba(244, 96, 19, 0.15),
+        0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.objective-item:hover::before {
+    opacity: 1;
+}
+
+.objective-item strong {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    display: block;
+}
+
+.objective-item {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.vision-highlight {
+    background: linear-gradient(135deg, rgba(244, 96, 19, 0.08) 0%, rgba(210, 0, 28, 0.08) 100%);
+    border: 2px solid rgba(244, 96, 19, 0.2);
+    border-radius: var(--space-lg);
+    padding: var(--space-2xl);
+    position: relative;
+    backdrop-filter: blur(15px);
+    text-align: center;
+}
+
+.vision-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+    opacity: 1;
+}
+
+.vision-highlight h3 {
+    color: var(--primary);
+    margin-bottom: var(--space-lg);
+}
+
+.vision-highlight p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* Mobile optimization for strategic positioning */
+@media (max-width: 768px) {
+    .strategic-positioning {
+        padding: var(--space-2xl) 0;
+    }
+    
+    .positioning-description {
+        font-size: 1.1rem;
+        margin-bottom: var(--space-2xl);
+    }
+    
+    .positioning-elements {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+        margin-bottom: var(--space-2xl);
+    }
+    
+    .objectives-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .positioning-card,
+    .objective-item {
+        padding: var(--space-lg);
+    }
+    
+    .card-icon {
+        font-size: 2.5rem;
+        margin-bottom: var(--space-md);
+    }
+    
+    .positioning-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .positioning-card p {
+        font-size: 1rem;
+    }
+    
+    .vision-highlight {
+        padding: var(--space-lg);
+    }
+    
+    .vision-highlight p {
+        font-size: 1.1rem;
+    }
+    
+    .immediate-objectives h3,
+    .long-term-vision h3 {
+        font-size: 1.4rem;
+        margin-bottom: var(--space-lg);
+    }
+}
+
 /* Footer */
 footer {
     background: #1A1A1A;
