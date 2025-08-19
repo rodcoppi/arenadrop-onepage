@@ -548,21 +548,21 @@ h4 {
 
 .model-points {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: var(--space-lg);
- 
 }
 
 /* CARDS MINIMALISTAS ELEGANTES */
 .model-point {
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(42, 42, 42, 0.9) 100%);
     border: 1px solid rgba(244, 96, 19, 0.15);
-    border-radius: var(--space-md);
-    padding: var(--space-xl);
+    border-radius: var(--space-lg);
+    padding: var(--space-2xl);
     position: relative;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     backdrop-filter: blur(10px);
     overflow: hidden;
+    min-height: 200px;
 }
 
 .model-point::before {
@@ -642,7 +642,7 @@ h4 {
 
 .market-points {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: var(--space-lg);
     margin-bottom: var(--space-2xl);
 }
@@ -651,12 +651,13 @@ h4 {
 .market-point {
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(42, 42, 42, 0.9) 100%);
     border: 1px solid rgba(244, 96, 19, 0.15);
-    border-radius: var(--space-md);
-    padding: var(--space-xl);
+    border-radius: var(--space-lg);
+    padding: var(--space-2xl);
     position: relative;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     backdrop-filter: blur(10px);
     overflow: hidden;
+    min-height: 180px;
 }
 
 .market-point::before {
@@ -1043,7 +1044,7 @@ h4 {
     max-width: 900px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: var(--space-lg);
 }
 
@@ -1051,12 +1052,13 @@ h4 {
 .advantage-section {
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(42, 42, 42, 0.9) 100%);
     border: 1px solid rgba(244, 96, 19, 0.15);
-    border-radius: var(--space-md);
-    padding: var(--space-xl);
+    border-radius: var(--space-lg);
+    padding: var(--space-2xl);
     position: relative;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     backdrop-filter: blur(10px);
     overflow: hidden;
+    min-height: 200px;
 }
 
 .advantage-section::before {
@@ -1131,80 +1133,32 @@ h4 {
     margin-bottom: var(--space-3xl);
 }
 
-.proven-success {
-    margin-bottom: var(--space-3xl);
-}
-
-.proven-success h3,
-.team-members h3 {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--primary);
+.proven-success-text {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
     text-align: center;
-    margin-bottom: var(--space-xl);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--space-lg);
 }
 
-.success-points {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-lg);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.success-point {
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(42, 42, 42, 0.9) 100%);
-    border: 1px solid rgba(244, 96, 19, 0.15);
-    border-radius: var(--space-md);
-    padding: var(--space-xl);
-    position: relative;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    backdrop-filter: blur(10px);
-    text-align: left;
-}
-
-.success-point::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-}
-
-.success-point:hover {
-    transform: translateY(-4px);
-    border-color: rgba(244, 96, 19, 0.25);
-    box-shadow: 
-        0 12px 25px rgba(244, 96, 19, 0.15),
-        0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.success-point:hover::before {
-    opacity: 1;
-}
-
-.success-point strong {
+.proven-success-text strong {
     color: var(--primary);
     font-weight: 600;
-    margin-bottom: var(--space-sm);
-    display: block;
 }
 
 .members-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--space-md);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-lg);
     margin-top: var(--space-xl);
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(42, 42, 42, 0.4) 100%);
     border: 1px solid rgba(244, 96, 19, 0.1);
     border-radius: var(--space-lg);
-    padding: var(--space-xl);
+    padding: var(--space-2xl);
     backdrop-filter: blur(15px);
     position: relative;
 }
@@ -1223,12 +1177,13 @@ h4 {
 .member-card {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
     border: 1px solid rgba(244, 96, 19, 0.08);
-    border-radius: var(--space-sm);
-    padding: var(--space-lg);
+    border-radius: var(--space-md);
+    padding: var(--space-xl);
     position: relative;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     text-align: left;
     overflow: hidden;
+    min-height: 160px;
 }
 
 .member-card::before {
@@ -1476,14 +1431,9 @@ h4 {
         font-size: 1.2rem;
     }
     
-    .success-points {
-        gap: var(--space-md);
-    }
-    
-    .proven-success h3,
-    .team-members h3 {
-        font-size: 1.4rem;
-        margin-bottom: var(--space-lg);
+    .proven-success-text {
+        font-size: 1rem;
+        margin-bottom: var(--space-md);
     }
 }
 
@@ -1588,19 +1538,20 @@ h4 {
 
 .objectives-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: var(--space-lg);
 }
 
 .objective-item {
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(42, 42, 42, 0.9) 100%);
     border: 1px solid rgba(244, 96, 19, 0.15);
-    border-radius: var(--space-md);
-    padding: var(--space-xl);
+    border-radius: var(--space-lg);
+    padding: var(--space-2xl);
     position: relative;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     backdrop-filter: blur(10px);
     text-align: left;
+    min-height: 160px;
 }
 
 .objective-item::before {
@@ -1611,6 +1562,7 @@ h4 {
     right: 0;
     height: 3px;
     background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: var(--space-lg) var(--space-lg) 0 0;
     opacity: 0.7;
     transition: opacity 0.3s ease;
 }
