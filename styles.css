@@ -1150,6 +1150,27 @@ h4 {
     font-weight: 600;
 }
 
+.platform-link {
+    color: var(--primary);
+    text-decoration: none;
+    margin-left: var(--space-xs);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+    display: inline-flex;
+    align-items: center;
+}
+
+.platform-link:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+    color: var(--primary-dark);
+}
+
+.platform-link i {
+    font-size: 1rem;
+}
+
 .members-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
